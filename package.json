@@ -1,0 +1,27 @@
+{
+    "name": "fadal-syntax-highlight",
+    "displayName": "Fadal G-Code Highlighter",
+    "description": "Syntax highlighter for Fadal G-Code",
+    "version": "0.0.1",
+    "publisher": "Randal Barlow",
+    "engines": {
+        "vscode": "^1.55.0"
+    },
+    "contributes": {
+        "languages": [
+            {
+                "id": "fadal",
+                "aliases": ["Fadal", "fadal"],
+                "extensions": [".fadal", ".nc", ".gcode"], 
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "fadal",
+                "scopeName": "source.fadal",
+                "path": "./syntaxes/fadal.tmLanguage.json"
+            }
+        ]
+    }
+}

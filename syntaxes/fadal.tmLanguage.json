@@ -1,0 +1,110 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Fadal",
+    "patterns": [
+        {
+            "begin": "^#",
+            "end": "$",
+            "name": "meta.macro.fadal",
+            "patterns": [
+                {
+                    "match": "\\b(GOTO|IF|THEN|FOR|NEXT|PRINT|INPUT|END|DIM|LET|TO|STEP|REM|DATA|READ|RETURN|STOP|GOSUB|ON|WAIT)\\b",
+                    "name": "keyword.control.basic.fadal"
+                },
+                {
+                    "match": "\".*?\"",
+                    "name": "string.quoted.double.basic.fadal"
+                },
+                {
+                    "match": "\\b\\d+\\b",
+                    "name": "constant.numeric.basic.fadal"
+                },
+                {
+                    "match": "'.*",
+                    "name": "comment.line.singlequote.fadal"
+                },
+                {
+                    "match": "#\\d+",
+                    "name": "variable.parameter.fadal"
+                },
+                {
+                    "match": "[+\\-*/]",
+                    "name": "keyword.operator.arithmetic.fadal"
+                },
+                {
+                    "match": "\\b(SIN|COS|TAN)\\b",
+                    "name": "support.function.math.fadal"
+                },
+                {
+                    "match": ":\\([^\\n]+\\)",
+                    "name": "entity.name.label"
+                }
+            ]
+        },
+        {
+            "match": "\\([^)]+\\)|\\([^\\n]+",
+            "name": "comment.line.parenthesis.fadal"
+        },
+        {
+            "match": "(G\\d+)",
+            "name": "keyword.control.gcode.fadal"
+        },
+        {
+            "match": "(M\\d+)",
+            "name": "keyword.control.mcode.fadal"
+        },
+        {
+            "match": "\\b(T\\d+)",
+            "name": "variable.other.tool.fadal"
+        },
+        {
+            "match": "\\b(H\\d+)",
+            "name": "markup.underline.fadal"
+        },
+        {
+            "match": "\\b(E\\d+)",
+            "name": "markup.underline.fadal"
+        },
+        {
+            "match": ";.*",
+            "name": "comment.line.semicolon.fadal"
+        },
+        {
+            "match": "(X-?\\d*\\.?\\d+|-?\\.\\d+)",
+            "name": "support.class.fadal"
+        },
+        {
+            "match": "(Y-?\\d*\\.?\\d+|-?\\.\\d+)",
+            "name": "entity.name.class.fadal"
+        },
+        {
+            "match": "(Z-?\\d*\\.?\\d+|-?\\.\\d+)",
+            "name": "variable.parameter.fadal"
+        },
+        {
+            "match": "(B-?\\d*\\.?\\d+|-?\\.\\d+)",
+            "name": "constant.language.fadal2"
+        },
+        {
+            "match": "(A-?\\d*\\.?\\d+|-?\\.\\d+)",
+            "name": "variable.parameter.fadal2"
+        },
+        {
+            "match": "(F-?\\d*\\.?\\d+|-?\\.\\d+)",
+            "name": "entity.name.function.fadal"
+        },
+        {
+            "match": "(I-?\\d*\\.?\\d+|-?\\.\\d+)",
+            "name": "markup.italic"
+        },
+        {
+            "match": "(K-?\\d*\\.?\\d+|-?\\.\\d+)",
+            "name": "markup.italic"
+        },
+        {
+            "match": "(J-?\\d*\\.?\\d+|-?\\.\\d+)",
+            "name": "markup.italic"
+        }
+    ],
+    "scopeName": "source.fadal"
+}
